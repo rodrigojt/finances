@@ -17,7 +17,13 @@ export class MyApp {
 
     /* Método construtor */
     constructor(platform) {
-        this.rootPage = HomePage;
+
+        // Construir o menu
+        this.home = HomePage;
+        this.contas = ContasPage;
+
+        // Definir qual a página será exibida
+        this.rootPage = this.home;
 
         /* Evento disparado quando a aplicação estiver carregada */
         platform.ready().then(() => {
@@ -25,5 +31,9 @@ export class MyApp {
             // Here you can do any higher level native things you might need.
             StatusBar.styleDefault();
         });
+    }
+    
+    openPage(opcao) {
+        this.rootPage = opcao;
     }
 }
