@@ -1,4 +1,4 @@
-import {Page, NavController} from 'ionic-angular';
+import {Page} from 'ionic-angular';
 
 /*
   Generated class for the ModalContasPage page.
@@ -10,11 +10,7 @@ import {Page, NavController} from 'ionic-angular';
   templateUrl: 'build/pages/modal-contas/modal-contas.html',
 })
 export class ModalContasPage {
-  static get parameters() {
-    return [[NavController]];
-  }
+  constructor() {
 
-  constructor(nav) {
-    this.nav = nav;
   }
 }

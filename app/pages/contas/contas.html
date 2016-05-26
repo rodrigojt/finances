@@ -8,5 +8,13 @@
 </ion-navbar>
 
 <ion-content>
-    Página de Contas
+    <ion-list>
+        <!-- O * indica que é um template que pode ou não ser renderizado na página -->
+        <ion-item *ngFor="#item of listContas">
+            {{item.descricao}}
+        </ion-item>
+    </ion-list>
+    <button fab fab-bottom fab-right danger>
+        <ion-icon name="add"></ion-icon>
+    </button>
 </ion-content>
